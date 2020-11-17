@@ -26,7 +26,7 @@ jobs:
     - name: Get the last version
       id: get_version
       #run: echo ::set-output name=VERSION::$(git tag --sort=committerdate  | tail -1)
-      run: echo "lastVersion=$(git tag --sort=committerdate  | tail -1)" >> $GITHUB_ENV
+      run: echo "lastVersion=::$(git tag --sort=committerdate  | tail -1)" >> $GITHUB_ENV
 
     
     - name: Print Version
